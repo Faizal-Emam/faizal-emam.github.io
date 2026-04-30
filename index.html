@@ -1,149 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faizal Emam | Premium DevOps Consultant</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary: #22c55e;
-            --secondary: #06b6d4;
-            --bg: #020617;
-            --glass: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.1);
-        }
+<section id="career-deep-dive">
+    <h2 class="section-title"><i class="fas fa-terminal"></i> system.log --level=<strong>EXPERIENCE</strong></h2>
 
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            margin: 0;
-            color: #f8fafc;
-            background: radial-gradient(circle at 20% 20%, #1e293b, var(--bg));
-            background-attachment: fixed;
-            line-height: 1.6;
-        }
+    <!-- Job 1: DevOps Insiders -->
+    <div class="card timeline-item">
+        <div class="badge">Nov 2025 – Present</div>
+        <h3>DevOps Engineer <span style="color: var(--secondary);">@DevOps Insiders</span></h3>
+        <p><strong>Stack:</strong> Terraform, Azure AKS, AWS EKS, GitHub Actions, ArgoCD</p>
+        <ul>
+            <li>Provisioning production-grade Kubernetes clusters using **Terraform** for full Infrastructure as Code (IaC) lifecycle management.</li>
+            <li>Architected CI/CD pipelines that reduced manual deployment effort by **80%**.</li>
+            <li>Automating microservices deployment with GitOps principles to ensure zero-downtime updates.</li>
+        </ul>
+    </div>
 
-        section {
-            padding: 100px 20px;
-            max-width: 1100px;
-            margin: auto;
-            animation: fadeUp 0.8s ease forwards;
-        }
+    <!-- Job 2: Blue Sky Coffee -->
+    <div class="card timeline-item">
+        <div class="badge">April 2022 – Present</div>
+        <h3>IT Manager & Cloud Architect <span style="color: var(--secondary);">@Blue Sky Coffee</span></h3>
+        <p><strong>Hardware:</strong> 2x Intel Silver 4310, 96GB RAM, NVMe 4.0</p>
+        <ul>
+            <li>Managing **server.blueskycoffe.com**, a high-performance Bare Metal server in Buffalo, NY.</li>
+            <li>Led the migration of **Odoo 18/19 POS** workloads to Azure, maintaining **99.9% uptime** for retail operations.</li>
+            <li>Implementing **12GB+ enterprise database backups** and 3Gbps DDoS protection for secure transaction environments.</li>
+            <li>Handling domain infrastructure, **Cloudflare DNS**, and digital branding for multi-branch sync.</li>
+        </ul>
+    </div>
 
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .gradient-text {
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .btn {
-            background: linear-gradient(90deg, var(--primary), #16a34a);
-            padding: 16px 32px;
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 700;
-            display: inline-block;
-            transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5);
-        }
-
-        .card {
-            background: var(--glass);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-            padding: 30px;
-            border-radius: 20px;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.06);
-            border-color: var(--primary);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-
-        .badge {
-            background: rgba(34, 197, 94, 0.1);
-            color: var(--primary);
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: 600;
-            border: 1px solid rgba(34, 197, 94, 0.2);
-        }
-
-        hr {
-            border: none;
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--glass-border), transparent);
-        }
-    </style>
-</head>
-
-<body>
-
-    <section>
-        <div style="text-align: center;">
-            <span class="badge">🚀 Premium DevOps Consultant | Saudi Arabia</span>
-            <h1 style="font-size: 3.5rem; margin: 20px 0;">
-                I Help Businesses <br>
-                <span class="gradient-text">Reduce Cloud Costs & Deploy 80% Faster</span>
-            </h1>
-            <p style="font-size: 1.2rem; color: #94a3b8; max-width: 700px; margin: auto;">
-                I architect high-availability Azure ecosystems and automate Odoo ERP deployments using Kubernetes and Terraform.
-            </p>
-            <div style="margin-top: 40px;">
-                <a class="btn" href="https://wa.me/966534553453">💬 Get Free Cloud Audit</a>
-            </div>
-        </div>
-    </section>
-
-    <hr>
-
-    <section id="expertise">
-        <h2 style="text-align: center;">Enterprise-Grade Solutions</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="fas fa-cloud-bolt" style="color: var(--primary); font-size: 2rem;"></i>
-                <h3>Azure IaC</h3>
-                <p>Full resource lifecycle management using Terraform for Blue Sky Coffee.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-gears" style="color: var(--secondary); font-size: 2rem;"></i>
-                <h3>Odoo DevOps</h3>
-                <p>Automated Odoo 18/19 deployments with zero-downtime GitOps.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-shield-halved" style="color: var(--primary); font-size: 2rem;"></i>
-                <h3>SRE & Security</h3>
-                <p>99.9% uptime with Prometheus, Grafana, and automated patch cycles.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer style="text-align: center; padding: 50px; color: #64748b;">
-        <p>&copy; 2026 ITDelhi.in | Faizal Emam | Dammam, KSA</p>
-    </footer>
-
-</body>
-</html>
+    <!-- Job 3: Capital First Limited -->
+    <div class="card timeline-item">
+        <div class="badge">2016 – 2021</div>
+        <h3>System Administrator <span style="color: var(--secondary);">@Capital First Limited</span></h3>
+        <p><strong>Focus:</strong> Cisco Networking, Linux/Windows Server Ops</p>
+        <ul>
+            <li>Configured and maintained **Cisco Routing & Switching** (CCNA/CCNP level) for enterprise connectivity.</li>
+            <li>Managed multi-branch VPN tunnels and secure endpoint access for corporate users.</li>
+            <li>Ensured high availability of heterogeneous server environments and hardware maintenance.</li>
+        </ul>
+    </div>
+</section>
