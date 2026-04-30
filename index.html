@@ -1,196 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Faizal Emam | DevOps Consultant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faizal Emam | Premium DevOps Consultant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #22c55e;
+            --secondary: #06b6d4;
+            --bg: #020617;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            color: #f8fafc;
+            background: radial-gradient(circle at 20% 20%, #1e293b, var(--bg));
+            background-attachment: fixed;
+            line-height: 1.6;
+        }
 
-<style>
-body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    margin:0;
-    background:#0f172a;
-    color:white;
-}
-section {padding:60px 20px; max-width:1100px; margin:auto;}
-h1,h2 {font-weight:800;}
-.btn {
-    background:#22c55e;
-    padding:14px 22px;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    display:inline-block;
-    margin-top:15px;
-}
-.btn-secondary {
-    background:#1e293b;
-}
-.card {
-    background:#1e293b;
-    padding:20px;
-    border-radius:12px;
-    margin-top:20px;
-}
-.grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-.badge {
-    background:#22c55e;
-    padding:6px 12px;
-    border-radius:20px;
-    display:inline-block;
-    font-size:12px;
-}
-</style>
+        section {
+            padding: 100px 20px;
+            max-width: 1100px;
+            margin: auto;
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn {
+            background: linear-gradient(90deg, var(--primary), #16a34a);
+            padding: 16px 32px;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            display: inline-block;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5);
+        }
+
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: var(--primary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .badge {
+            background: rgba(34, 197, 94, 0.1);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--glass-border), transparent);
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section>
-<span class="badge">🚀 DevOps Consultant | Saudi Arabia</span>
-<h1>I Help Businesses Reduce Cloud Costs & Deploy 80% Faster</h1>
+    <section>
+        <div style="text-align: center;">
+            <span class="badge">🚀 Premium DevOps Consultant | Saudi Arabia</span>
+            <h1 style="font-size: 3.5rem; margin: 20px 0;">
+                I Help Businesses <br>
+                <span class="gradient-text">Reduce Cloud Costs & Deploy 80% Faster</span>
+            </h1>
+            <p style="font-size: 1.2rem; color: #94a3b8; max-width: 700px; margin: auto;">
+                I architect high-availability Azure ecosystems and automate Odoo ERP deployments using Kubernetes and Terraform.
+            </p>
+            <div style="margin-top: 40px;">
+                <a class="btn" href="https://wa.me/966534553453">💬 Get Free Cloud Audit</a>
+            </div>
+        </div>
+    </section>
 
-<p>
-I design scalable, secure cloud infrastructure using Kubernetes, Terraform & Azure.
-<br><br>
-<strong>أساعد الشركات على تقليل التكاليف وزيادة سرعة النشر</strong>
-</p>
+    <hr>
 
-<a class="btn" href="https://wa.me/966534553453">💬 Chat on WhatsApp</a>
-<a class="btn btn-secondary" href="#audit">📊 Get Free Audit</a>
-</section>
+    <section id="expertise">
+        <h2 style="text-align: center;">Enterprise-Grade Solutions</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-cloud-bolt" style="color: var(--primary); font-size: 2rem;"></i>
+                <h3>Azure IaC</h3>
+                <p>Full resource lifecycle management using Terraform for Blue Sky Coffee.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-gears" style="color: var(--secondary); font-size: 2rem;"></i>
+                <h3>Odoo DevOps</h3>
+                <p>Automated Odoo 18/19 deployments with zero-downtime GitOps.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-shield-halved" style="color: var(--primary); font-size: 2rem;"></i>
+                <h3>SRE & Security</h3>
+                <p>99.9% uptime with Prometheus, Grafana, and automated patch cycles.</p>
+            </div>
+        </div>
+    </section>
 
-<!-- TRUST -->
-<section>
-<h2>Trusted Technologies</h2>
-<div class="grid">
-<div class="card">AWS</div>
-<div class="card">Azure</div>
-<div class="card">Kubernetes</div>
-<div class="card">Odoo ERP</div>
-</div>
-</section>
-
-<!-- PROBLEM -->
-<section>
-<h2>Is Your Infrastructure Costing You Money?</h2>
-
-<div class="grid">
-<div class="card">
-<h3 style="color:#ef4444;">Problems</h3>
-<ul>
-<li>Frequent downtime</li>
-<li>Slow deployments</li>
-<li>High cloud bills</li>
-<li>Manual operations</li>
-</ul>
-</div>
-
-<div class="card">
-<h3 style="color:#22c55e;">Solutions</h3>
-<ul>
-<li>Automated cloud infrastructure</li>
-<li>Kubernetes deployment</li>
-<li>CI/CD pipelines</li>
-<li>Real-time monitoring</li>
-</ul>
-</div>
-</div>
-</section>
-
-<!-- SERVICES -->
-<section>
-<h2>Services</h2>
-<div class="grid">
-<div class="card">
-<h3>Cloud & Kubernetes</h3>
-<p>Production-ready AWS & Azure infrastructure</p>
-</div>
-
-<div class="card">
-<h3>CI/CD Automation</h3>
-<p>Deploy faster with zero manual steps</p>
-</div>
-
-<div class="card">
-<h3>Terraform (IaC)</h3>
-<p>Fully automated infrastructure setup</p>
-</div>
-
-<div class="card">
-<h3>Odoo DevOps 🔥</h3>
-<p>Deploy & scale Odoo ERP on cloud</p>
-</div>
-</div>
-</section>
-
-<!-- CASE STUDY -->
-<section>
-<h2>Case Study</h2>
-
-<div class="card">
-<h3>Odoo Cloud Migration (Saudi Client)</h3>
-
-<p><strong>Before:</strong></p>
-<ul>
-<li>Daily crashes</li>
-<li>Manual deployment</li>
-</ul>
-
-<p><strong>After:</strong></p>
-<ul>
-<li>Deployment: 2 hours → 15 minutes</li>
-<li>Downtime: Almost zero</li>
-<li>Cost reduced by 30%</li>
-</ul>
-
-</div>
-</section>
-
-<!-- AUDIT -->
-<section id="audit">
-<h2>🎯 Free Cloud Audit</h2>
-
-<p>
-I will analyze your system and show:
-</p>
-
-<ul>
-<li>Where you're losing money</li>
-<li>Why deployments are slow</li>
-<li>How to fix in 7 days</li>
-</ul>
-
-<a class="btn" href="https://wa.me/966534553453">
-Get Free Audit on WhatsApp
-</a>
-</section>
-
-<!-- ABOUT -->
-<section>
-<h2>About Me</h2>
-<p>
-I’m Faizal Emam, a DevOps Consultant with 10+ years experience helping businesses
-scale infrastructure, reduce downtime, and automate everything.
-</p>
-</section>
-
-<!-- FINAL CTA -->
-<section>
-<h2>Ready to Scale Your Business?</h2>
-
-<p>I work with limited clients each month.</p>
-
-<a class="btn" href="https://wa.me/966534553453">
-📞 Contact Me Now
-</a>
-</section>
+    <footer style="text-align: center; padding: 50px; color: #64748b;">
+        <p>&copy; 2026 ITDelhi.in | Faizal Emam | Dammam, KSA</p>
+    </footer>
 
 </body>
 </html>
