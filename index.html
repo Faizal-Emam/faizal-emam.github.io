@@ -1,59 +1,83 @@
-<!-- Hero Section Update: Azure & Terraform focus -->
-<section id="home" class="hero">
-    <div class="hero-content">
-        <span class="badge"><i class="fas fa-microchip"></i> Infrastructure as Code Expert</span>
-        <h1>Architecting <span class="gradient-text">Azure Ecosystems</span> with Terraform</h1>
-        <p>Expert in provisioning automated Azure environments and deploying scalable Odoo ERP solutions.</p>
-        
-        <div class="contact-strip">
-            <span><i class="fas fa-envelope"></i> info@itdelhi.in</span>
-            <span><i class="fas fa-phone"></i> +966 53 455 3453</span>
-            <span><i class="fas fa-location-dot"></i> Dammam, Saudi Arabia</span>
-        </div>
+<!-- Infrastructure Section: DevOps Mindset Highlight -->
+<section id="infrastructure" class="special-section">
+    <div class="status-header">
+        <span class="status-dot"></span> 
+        <p>Current System Status: **Optimal (99.9% Uptime)**</p>
     </div>
-</section>
-
-<!-- Azure & Odoo Specific Projects Section -->
-<section id="azure-odoo" class="special-section">
-    <h2 class="section-title">Latest Cloud Deployments</h2>
+    
+    <h2 class="section-title">Infrastructure as Code (IaC) Architecture</h2>
     <div class="odoo-grid">
         <div class="odoo-card">
-            <i class="fas fa-cloud-bolt"></i>
-            <h3>Azure Cloud IaC</h3>
-            <p>Managed full resource lifecycle using **Terraform**, provisioning Virtual Networks, Resource Groups, and automated VM instances for high-availability hosting.</p>
+            <i class="fas fa-terminal"></i>
+            <h3>Automated Provisioning</h3>
+            <p>Utilizing **Terraform** to manage Azure Resource Groups, Virtual Networks, and VM instances for **Blue Sky Coffee**.</p>
         </div>
         <div class="odoo-card">
-            <i class="fas fa-gears"></i>
-            <h3>Odoo 18/19 Implementation</h3>
-            <p>Deploying and configuring **Odoo ERP** on Linux servers with automated backup-recovery, Nginx reverse proxy, and custom module integration for business automation.</p>
+            <i class="fas fa-shield-virus"></i>
+            <h3>DevSecOps Integration</h3>
+            <p>Implementing security best practices across the SDLC, including automated patch management and disaster recovery procedures.</p>
         </div>
         <div class="odoo-card">
-            <i class="fas fa-network-wired"></i>
-            <h3>CI/CD for ERP</h3>
-            <p>Building automated pipelines using **GitHub Actions** and **ArgoCD** to push Odoo updates directly from Git to Azure production environments.</p>
+            <i class="fas fa-microchip"></i>
+            <h3>Microservices & SRE</h3>
+            <p>Architecting Kubernetes-based microservices on **AWS EKS** and **Azure AKS** using Helm and GitOps workflows.</p>
         </div>
     </div>
 </section>
 
-<!-- Experience Update: Reflecting Blue Sky & DevOps Insiders -->
-<section id="experience" class="exp-section">
-    <h2 class="section-title">Professional Milestones</h2>
-    <div class="timeline">
-        <div class="timeline-item">
-            <h4>DevOps Engineer (Cloud Infrastructure)</h4>
-            <p class="company">DevOps Insiders | 2025 - Present</p>
-            <ul>
-                <li>Designing Kubernetes-based microservices on **AWS EKS** and **Azure AKS**.</li>
-                <li>Architecting production-grade clusters using **Terraform** for IaC provisioning.</li>
-            </ul>
+<!-- Stats Section: Quantifying Your Experience -->
+<section class="exp-section">
+    <div class="odoo-grid stats-container">
+        <div class="stat-box">
+            <h3 class="gradient-text">10+</h3>
+            <p>Years in IT Infrastructure</p>
         </div>
-        <div class="timeline-item">
-            <h4>IT Manager (ERP & Infrastructure)</h4>
-            <p class="company">Blue Sky Coffee Establishment | 2022 - 2025</p>
-            <ul>
-                <li>Led full digital transformation, including **Odoo ERP setup** and branding infrastructure.</li>
-                <li>Migrated on-premises workloads to **Azure**, reducing costs and improving system resilience.</li>
-            </ul>
+        <div class="stat-box">
+            <h3 class="gradient-text">80%</h3>
+            <p>Reduction in Manual Bottlenecks</p>
+        </div>
+        <div class="stat-box">
+            <h3 class="gradient-text">100+</h3>
+            <p>Endpoints Managed</p>
         </div>
     </div>
 </section>
+
+<!-- Skill Badges for CSS -->
+<style>
+.status-header {
+    background: rgba(56, 189, 248, 0.1);
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    border: 1px solid var(--accent);
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #10b981;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+.stats-container {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.stat-box h3 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+</style>
