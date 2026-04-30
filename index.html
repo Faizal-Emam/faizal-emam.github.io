@@ -1,40 +1,186 @@
-<section id="career-deep-dive">
-    <h2 class="section-title"><i class="fas fa-terminal"></i> system.log --level=<strong>EXPERIENCE</strong></h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faizal Emam | DevOps & Cloud Infrastructure CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --terminal-green: #4ade80;
+            --azure-blue: #06b6d4;
+            --bg-dark: #020617;
+            --glass: rgba(15, 23, 42, 0.9);
+            --border: rgba(255, 255, 255, 0.1);
+        }
 
-    <!-- Job 1: DevOps Insiders -->
-    <div class="card timeline-item">
-        <div class="badge">Nov 2025 – Present</div>
-        <h3>DevOps Engineer <span style="color: var(--secondary);">@DevOps Insiders</span></h3>
-        <p><strong>Stack:</strong> Terraform, Azure AKS, AWS EKS, GitHub Actions, ArgoCD</p>
-        <ul>
-            <li>Provisioning production-grade Kubernetes clusters using **Terraform** for full Infrastructure as Code (IaC) lifecycle management.</li>
-            <li>Architected CI/CD pipelines that reduced manual deployment effort by **80%**.</li>
-            <li>Automating microservices deployment with GitOps principles to ensure zero-downtime updates.</li>
-        </ul>
-    </div>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            color: #e2e8f0;
+            background: var(--bg-dark);
+            overflow-x: hidden;
+        }
 
-    <!-- Job 2: Blue Sky Coffee -->
-    <div class="card timeline-item">
-        <div class="badge">April 2022 – Present</div>
-        <h3>IT Manager & Cloud Architect <span style="color: var(--secondary);">@Blue Sky Coffee</span></h3>
-        <p><strong>Hardware:</strong> 2x Intel Silver 4310, 96GB RAM, NVMe 4.0</p>
-        <ul>
-            <li>Managing **server.blueskycoffe.com**, a high-performance Bare Metal server in Buffalo, NY.</li>
-            <li>Led the migration of **Odoo 18/19 POS** workloads to Azure, maintaining **99.9% uptime** for retail operations.</li>
-            <li>Implementing **12GB+ enterprise database backups** and 3Gbps DDoS protection for secure transaction environments.</li>
-            <li>Handling domain infrastructure, **Cloudflare DNS**, and digital branding for multi-branch sync.</li>
-        </ul>
-    </div>
+        /* Developer Background: Code Rain Style */
+        body::before {
+            content: "terraform { \n  cloud { \n    organization = 'itdelhi' \n  }\n}\n\n# Provisioning server.blueskycoffe.com...\nresource 'azurerm_resource_group' 'rg' {\n  name = 'prod-rg'\n  location = 'Buffalo, NY'\n}\n\n# Odoo 19 POS Deployment\n$ kubectl get pods -n odoo-prod\n# NVMe 4.0 Status: Optimal\n# DDoS Protection: 3Gbps Active";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            font-family: 'Fira Code', monospace;
+            font-size: 13px;
+            color: rgba(74, 222, 128, 0.04);
+            white-space: pre;
+            padding: 20px;
+            pointer-events: none;
+        }
 
-    <!-- Job 3: Capital First Limited -->
-    <div class="card timeline-item">
-        <div class="badge">2016 – 2021</div>
-        <h3>System Administrator <span style="color: var(--secondary);">@Capital First Limited</span></h3>
-        <p><strong>Focus:</strong> Cisco Networking, Linux/Windows Server Ops</p>
-        <ul>
-            <li>Configured and maintained **Cisco Routing & Switching** (CCNA/CCNP level) for enterprise connectivity.</li>
-            <li>Managed multi-branch VPN tunnels and secure endpoint access for corporate users.</li>
-            <li>Ensured high availability of heterogeneous server environments and hardware maintenance.</li>
-        </ul>
-    </div>
-</section>
+        .container { max-width: 1000px; margin: 50px auto; padding: 20px; }
+
+        /* Header / Terminal Style */
+        .cv-header {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 20px;
+            border-bottom: 4px solid var(--terminal-green);
+            margin-bottom: 30px;
+        }
+
+        .name { font-size: 3rem; font-weight: 800; margin: 0; letter-spacing: -1px; }
+        .title { color: var(--terminal-green); font-family: 'Fira Code', monospace; font-size: 1.2rem; margin-top: 10px; }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        h2 { font-family: 'Fira Code', monospace; color: var(--azure-blue); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-top: 0; }
+
+        /* Experience Timeline */
+        .job { margin-bottom: 30px; border-left: 2px solid var(--terminal-green); padding-left: 25px; position: relative; }
+        .job::before { content: ''; width: 12px; height: 12px; background: var(--terminal-green); position: absolute; left: -7px; top: 5px; border-radius: 50%; box-shadow: 0 0 10px var(--terminal-green); }
+
+        .job-title { font-size: 1.3rem; font-weight: 700; margin: 0; }
+        .company-meta { color: var(--azure-blue); font-weight: 600; margin: 5px 0; display: flex; justify-content: space-between; }
+        .stack-label { font-size: 0.8rem; background: rgba(74, 222, 128, 0.1); color: var(--terminal-green); padding: 3px 10px; border-radius: 5px; font-family: 'Fira Code', monospace; }
+
+        ul { padding-left: 15px; margin-top: 10px; }
+        ul li { margin-bottom: 8px; font-size: 0.95rem; color: #cbd5e1; list-style: square; }
+        ul li strong { color: #fff; }
+
+        /* Tech Specs Grid */
+        .spec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 15px; }
+        .spec-box { background: rgba(255,255,255,0.03); border: 1px solid var(--border); padding: 15px; border-radius: 10px; text-align: center; }
+        .spec-box i { color: var(--azure-blue); font-size: 1.2rem; margin-bottom: 5px; display: block; }
+
+        @media (max-width: 768px) { .name { font-size: 2rem; } .company-meta { flex-direction: column; gap: 5px; } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- HEADER -->
+    <header class="cv-header">
+        <h1 class="name">Faizal <span style="color: var(--terminal-green);">Emam</span></h1>
+        <div class="title">> DevOps_Engineer && Cloud_Architect</div>
+        <div class="contact-info">
+            <span><i class="fas fa-map-marker-alt"></i> Dammam, Saudi Arabia</span>
+            <span><i class="fas fa-envelope"></i> info@itdelhi.in</span>
+            <span><i class="fas fa-phone"></i> +966 53 455 3453</span>
+            <span><i class="fas fa-globe"></i> itdelhi.in</span>
+        </div>
+    </header>
+
+    <!-- TECHNICAL ARSENAL -->
+    <section class="section-card">
+        <h2><i class="fas fa-code"></i> Technical_Arsenal</h2>
+        <div class="spec-grid">
+            <div class="spec-box"><i class="fas fa-cloud"></i>Azure / AWS</div>
+            <div class="spec-box"><i class="fas fa-terminal"></i>Terraform / IaC</div>
+            <div class="spec-box"><i class="fas fa-box"></i>Kubernetes / AKS</div>
+            <div class="spec-box"><i class="fab fa-linux"></i>AlmaLinux / Ubuntu</div>
+            <div class="spec-box"><i class="fas fa-network-wired"></i>CCNA / CCNP</div>
+            <div class="spec-box"><i class="fas fa-database"></i>Odoo 19 / POS</div>
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section class="section-card">
+        <h2><i class="fas fa-history"></i> Career_Deployment</h2>
+
+        <div class="job">
+            <h3 class="job-title">DevOps Engineer (Cloud Infrastructure)</h3>
+            <div class="company-meta">
+                <span>DevOps Insiders</span>
+                <span>Nov 2025 – Present</span>
+            </div>
+            <div class="stack-label">Terraform | AKS | ArgoCD | GitHub Actions</div>
+            <ul>
+                <li>Provisioning <strong>Azure AKS</strong> and <strong>AWS EKS</strong> clusters using Terraform for full-stack automation.</li>
+                <li>Reduced manual deployment time by <strong>80%</strong> through GitOps and CI/CD pipeline integration.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3 class="job-title">IT Manager (Infrastructure & ERP)</h3>
+            <div class="company-meta">
+                <span>Blue Sky Coffee Establishment</span>
+                <span>April 2022 – Present</span>
+            </div>
+            <div class="stack-label">Intel Silver 4310 | Odoo 19 | NVMe 4.0 | AlmaLinux</div>
+            <ul>
+                <li>Architected <strong>server.blueskycoffe.com</strong>: Dual Intel Silver 4310, 96GB RAM, NVMe 4.0 storage cluster in Buffalo, NY.</li>
+                <li>Led <strong>Odoo 18/19 POS</strong> migration to cloud with <strong>99.9% uptime</strong> and real-time retail sync.</li>
+                <li>Managed <strong>12GB+ database backups</strong> and 3Gbps DDoS protection layers.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3 class="job-title">System Administrator</h3>
+            <div class="company-meta">
+                <span>Capital First Limited</span>
+                <span>2016 – 2021</span>
+            </div>
+            <div class="stack-label">Cisco IOS | VPN | Linux/Windows Admin</div>
+            <ul>
+                <li>Managed <strong>Cisco Routing & Switching</strong> infrastructure and multi-branch VPN tunnels.</li>
+                <li>Ensured high availability of heterogeneous server environments and corporate hardware.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ACADEMIC & CERTS -->
+    <section class="section-card">
+        <h2><i class="fas fa-user-graduate"></i> Credentials</h2>
+        <div class="spec-grid">
+            <div class="spec-box"><strong>BCA</strong><br>Delhi University</div>
+            <div class="spec-box"><strong>CCNP</strong><br>Cisco Certified</div>
+            <div class="spec-box"><strong>CKA</strong><br>In Progress</div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
