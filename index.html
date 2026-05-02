@@ -43,7 +43,7 @@
         .arabic-text { color: #94a3b8; font-size: 1.2rem; margin-top: 10px; font-weight: 500; }
 
         /* Grid & Cards */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 60px 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin: 40px 0; }
         .card { 
             background: var(--glass); border: 1px solid rgba(255, 255, 255, 0.05); 
             padding: 40px; border-radius: 24px; transition: 0.4s; backdrop-filter: blur(10px);
@@ -51,7 +51,11 @@
         .card:hover { border-color: var(--p); transform: translateY(-8px); }
         .card h3 { margin-top: 0; color: var(--p); font-size: 1.5rem; }
 
-        /* Outcome Section */
+        /* Client Logos */
+        .client-logo { max-height: 70px; filter: grayscale(1) brightness(1.5); transition: 0.3s; }
+        .client-logo:hover { filter: grayscale(0) brightness(1); }
+
+        /* Outcomes Section */
         .outcomes { background: rgba(255,255,255,0.02); padding: 80px 0; border-radius: 40px; margin: 40px 0; }
 
         /* Buttons */
@@ -73,6 +77,7 @@
         <div class="container nav-flex">
             <strong style="font-size: 1.2rem; letter-spacing: 1px;">FAIZAL EMAM</strong>
             <div class="nav-links">
+                <a href="#clients">Clients</a>
                 <a href="#services">Services</a>
                 <a href="#case-study">Case Study</a>
                 <a href="cv.html">Technical CV</a>
@@ -90,6 +95,22 @@
     </header>
 
     <main class="container">
+        
+        <!-- Trusted Clients Section -->
+        <section id="clients" style="padding: 40px 0;">
+            <h2 style="text-align:center; font-size: 1.5rem; margin-bottom: 40px; color: #94a3b8;" data-aos="fade-up">Trusted by Industry Leaders in KSA</h2>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); align-items: center; justify-items: center; margin: 0;">
+                <div data-aos="zoom-in">
+                    <img src="images/future-achievement.png" alt="Future Achievement" class="client-logo">
+                    <p style="font-size: 11px; text-align: center; color: #64748b; margin-top: 10px; font-weight: 700;">FUTURE ACHIEVEMENT</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200">
+                    <img src="images/blue-sky-coffee.png" alt="Blue Sky Coffee" class="client-logo">
+                    <p style="font-size: 11px; text-align: center; color: #64748b; margin-top: 10px; font-weight: 700;">BLUE SKY COFFEE</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Business Outcomes Section -->
         <section class="outcomes" data-aos="fade-up">
             <div class="container grid" style="margin: 0;">
@@ -108,49 +129,49 @@
             </div>
         </section>
 
-        <!-- Refined Services -->
-        <section id="services" style="padding: 80px 0;">
+        <!-- Services -->
+        <section id="services" style="padding: 60px 0;">
             <h2 style="text-align:center; font-size: 2.5rem;" data-aos="fade-up">Consulting <span class="gradient">Specializations</span></h2>
             <div class="grid">
                 <div class="card" data-aos="fade-right">
                     <i class="fas fa-boxes icon" style="font-size: 2rem; color: var(--p);"></i>
-                    <h3>Odoo DevOps Lifecycle</h3>
-                    <p>Enterprise-grade Odoo deployment (V16-V19) on specialized Bare Metal infrastructure (Intel Silver 4310).</p>
+                    <h3>Odoo Lifecycle (V16-V19)</h3>
+                    <p>Enterprise deployment and seamless migrations on high-performance Intel Silver 4310 infrastructure.</p>
                 </div>
                 <div class="card" data-aos="fade-up">
                     <i class="fas fa-cloud icon" style="font-size: 2rem; color: var(--s);"></i>
-                    <h3>Cloud Architecture</h3>
-                    <p>Designing scalable Azure environments with dedicated Resource Groups and high-speed NVMe 4.0 storage.</p>
+                    <h3>Azure Cloud Architecture</h3>
+                    <p>Provisioning secure Resource Groups and VNets with automated Terraform state management.</p>
                 </div>
                 <div class="card" data-aos="fade-left">
                     <i class="fas fa-rocket icon" style="font-size: 2rem; color: var(--p);"></i>
-                    <h3>CI/CD Automation</h3>
-                    <p>Automating infrastructure provisioning with Terraform to eliminate manual errors and downtime.</p>
+                    <h3>POS Interface Strategy</h3>
+                    <p>Customizing Point of Sale interfaces for retail efficiency and real-time inventory synchronization.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Game Changer: Case Study -->
-        <section id="case-study" style="padding: 80px 0;" data-aos="zoom-in">
-            <h2 style="text-align:center; font-size: 2.5rem;">Proven <span class="gradient">Success</span></h2>
+        <!-- Case Study -->
+        <section id="case-study" style="padding: 60px 0;" data-aos="zoom-in">
+            <h2 style="text-align:center; font-size: 2.5rem;">Success <span class="gradient">Architecture</span></h2>
             <div class="card" style="border-left: 6px solid var(--p);">
-                <h3 style="color: white;">Odoo ERP Cloud Deployment (Blue Sky Coffee)</h3>
-                <p><strong>Challenge:</strong> Frequent system crashes and manual server management slowing down retail POS.</p>
-                <p><strong>Solution:</strong> Full migration to optimized Azure cloud with Terraform automation and real-time monitoring.</p>
-                <p><strong>Impact:</strong> Deployment reduced from hours to 15 minutes, 100% stable POS sync, and 30% reduction in cloud spend.</p>
+                <h3 style="color: white;">Odoo Infrastructure Migration (Blue Sky Coffee)</h3>
+                <p><strong>Challenge:</strong> Slow POS response and frequent database downtime during peak hours.</p>
+                <p><strong>The Fix:</strong> Deployment of a 96GB RAM Bare Metal cluster with NVMe 4.0 storage via automated GitOps pipelines.</p>
+                <p><strong>Result:</strong> 100% stable POS transactions and 80% faster branch-to-cloud synchronization.</p>
             </div>
         </section>
 
         <section class="container" style="text-align: center; padding: 100px 0;" data-aos="fade-up">
-            <h2>Ready to Scale Your Infrastructure?</h2>
-            <p style="color: #94a3b8; margin-bottom: 40px;">Currently managing 100+ endpoints with high-availability Azure architecture.</p>
-            <a href="https://wa.me/966534553453" class="btn">Get Your Free 15-Min Infrastructure Audit</a>
+            <h2>Ready to Stabilize Your Infrastructure?</h2>
+            <p style="color: #94a3b8; margin-bottom: 40px;">Expert in Odoo customizations, CCTV backups, and ERPNext implementations.</p>
+            <a href="https://wa.me/966534553453" class="btn">Start Your Free Infrastructure Review</a>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 ITDELHI.IN | Faizal Emam | DevOps & Cloud Architect</p>
-        <p style="font-size: 13px; margin-top: 10px;">Managed via Terraform & GitHub Actions</p>
+        <p style="font-size: 13px; margin-top: 10px;">Dammam, KSA | server.blueskycoffe.com</p>
     </footer>
 
     <!-- Scripts -->
