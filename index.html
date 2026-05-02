@@ -1,139 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Faizal Emam | DevOps & Cloud Consultant KSA</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faizal Emam | Enterprise Odoo & Cloud Infrastructure</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --p: #22c55e; --s: #3b82f6; --bg: #020617; --glass: rgba(15, 23, 42, 0.9); }
+        
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body { 
+            margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; 
+            background: var(--bg); color: #f8fafc; line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container { max-width: 1150px; margin: auto; padding: 0 20px; }
 
-<style>
-body {
-    margin:0;
-    font-family:'Plus Jakarta Sans',sans-serif;
-    color:white;
-    background: radial-gradient(circle at 20% 20%, #1e293b, #020617);
-    line-height: 1.6;
-}
-section {padding:80px 20px; max-width:1100px; margin:auto;}
-h1 {font-size:48px; line-height: 1.2; margin-bottom: 20px;}
-h2 {font-size:32px; margin-bottom:30px; text-align: center;}
+        /* Navigation */
+        nav { 
+            position: fixed; top: 0; width: 100%; background: rgba(2, 6, 23, 0.8); 
+            backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 15px 0;
+        }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 14px; transition: 0.3s; }
+        .nav-links a:hover { color: var(--p); }
 
-.gradient {background:linear-gradient(90deg,#22c55e,#06b6d4);-webkit-background-clip:text;color:transparent;}
+        /* Hero Section */
+        header { 
+            padding: 180px 0 100px; text-align: center; 
+            background: radial-gradient(circle at 50% 20%, rgba(34, 197, 94, 0.15), transparent); 
+        }
+        h1 { font-size: 3.8rem; margin: 20px 0; font-weight: 800; line-height: 1.1; letter-spacing: -2px; }
+        .gradient { background: linear-gradient(90deg, var(--p), var(--s)); -webkit-background-clip: text; color: transparent; }
+        .arabic-text { color: #94a3b8; font-size: 1.2rem; margin-top: 10px; font-weight: 500; }
 
-.btn {
-    background:linear-gradient(90deg,#22c55e,#16a34a);
-    padding:16px 28px;
-    border-radius:12px;
-    color:white;
-    text-decoration:none;
-    display:inline-block;
-    margin:10px 10px 0 0;
-    font-weight: 700;
-    transition: 0.3s;
-    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
-}
-.btn:hover {transform:scale(1.05); box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5);}
-.btn-secondary {background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);}
+        /* Grid & Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 60px 0; }
+        .card { 
+            background: var(--glass); border: 1px solid rgba(255, 255, 255, 0.05); 
+            padding: 40px; border-radius: 24px; transition: 0.4s; backdrop-filter: blur(10px);
+        }
+        .card:hover { border-color: var(--p); transform: translateY(-8px); }
+        .card h3 { margin-top: 0; color: var(--p); font-size: 1.5rem; }
 
-.card {
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.1);
-    padding:30px;
-    border-radius:20px;
-    backdrop-filter:blur(10px);
-    transition: 0.3s;
-}
-.card:hover {border-color: #22c55e; transform: translateY(-5px);}
+        /* Outcome Section */
+        .outcomes { background: rgba(255,255,255,0.02); padding: 80px 0; border-radius: 40px; margin: 40px 0; }
 
-.grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:25px;}
+        /* Buttons */
+        .btn { 
+            background: var(--p); color: white; padding: 18px 36px; border-radius: 14px; 
+            text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(34, 197, 94, 0.2); border: none;
+        }
+        .btn:hover { background: #16a34a; transform: scale(1.05); box-shadow: 0 15px 30px rgba(34, 197, 94, 0.4); }
 
-hr {border:none;height:1px;background:linear-gradient(to right, transparent,#22c55e,transparent);margin:40px 0;}
-
-@media (max-width: 768px) { h1 {font-size: 32px;} }
-</style>
+        footer { padding: 60px 0; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.05); color: #64748b; }
+        
+        @media (max-width: 768px) { h1 { font-size: 2.5rem; } }
+    </style>
 </head>
-
 <body>
 
-<section style="text-align: center; padding-top: 120px;">
-    <span style="background: rgba(34, 197, 94, 0.1); color: #22c55e; padding: 8px 16px; border-radius: 50px; font-weight: 600; font-size: 14px;">🚀 10+ Years of DevOps Excellence</span>
-    <h1>I Help Businesses <span class="gradient">Reduce Cloud Costs & Deploy 80% Faster</span></h1>
-
-    <p style="font-size: 1.2rem; color: #94a3b8; max-width: 800px; margin: auto;">
-        DevOps Consultant in Dammam, KSA. specialized in high-availability infrastructure using Kubernetes, Terraform & Azure for Enterprise ERP/POS.
-        <br><br>
-        <strong>أساعد الشركات في المملكة على تقليل تكاليف السحابة وتحسين الأداء بنسبة ٨٠٪</strong>
-    </p>
-
-    <div style="margin-top: 40px;">
-        <a class="btn" href="https://wa.me/966534553453">💬 Get Free Cloud Audit</a>
-        <a class="btn btn-secondary" href="cv.html">💻 Technical Deep-Dive</a>
-    </div>
-</section>
-
-<hr>
-
-<section id="solutions">
-    <h2>Why Companies Hire Me</h2>
-    <div class="grid">
-        <div class="card">
-            <h3 style="color:#ef4444;"><i class="fas fa-exclamation-triangle"></i> The Pain</h3>
-            <ul style="color: #cbd5e1;">
-                <li>Expensive monthly Azure/AWS bills</li>
-                <li>System crashes during peak POS hours</li>
-                <li>Manual, slow, and risky deployments</li>
-            </ul>
+    <nav>
+        <div class="container nav-flex">
+            <strong style="font-size: 1.2rem; letter-spacing: 1px;">FAIZAL EMAM</strong>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#case-study">Case Study</a>
+                <a href="cv.html">Technical CV</a>
+            </div>
         </div>
+    </nav>
 
-        <div class="card">
-            <h3 style="color:#22c55e;"><i class="fas fa-check-circle"></i> My Solution</h3>
-            <ul style="color: #cbd5e1;">
-                <li>30% reduction in cloud operational costs</li>
-                <li>99.9% Uptime with Auto-scaling K8s</li>
-                <li>Zero-touch CI/CD Automation</li>
-            </ul>
+    <header class="container" data-aos="fade-up">
+        <span style="color: var(--p); font-weight: 700; letter-spacing: 2px; font-size: 14px;">AZURE & ODOO INFRASTRUCTURE SPECIALIST</span>
+        <h1>Enterprise <span class="gradient">Odoo & Cloud Infrastructure</span><br>That Reduces Operational Costs</h1>
+        <p class="arabic-text">نقوم بتحسين أداء الأنظمة وتقليل التكاليف السحابية للشركات</p>
+        <div style="margin-top: 40px;">
+            <a href="https://wa.me/966534553453" class="btn">Schedule a Free Infrastructure Review</a>
         </div>
-    </section>
+    </header>
 
-<hr>
+    <main class="container">
+        <!-- Business Outcomes Section -->
+        <section class="outcomes" data-aos="fade-up">
+            <div class="container grid" style="margin: 0;">
+                <div class="card" style="text-align: center;">
+                    <h3>↓ 30% Cost</h3>
+                    <p>Reduction in monthly cloud bills through Terraform-based optimization.</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <h3>↑ 80% Speed</h3>
+                    <p>Improvement in deployment time using automated CI/CD pipelines.</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <h3>99.9% Uptime</h3>
+                    <p>Achieved near-zero downtime for business-critical Odoo POS environments.</p>
+                </div>
+            </div>
+        </section>
 
-<section id="services">
-    <h2>Consulting Services</h2>
-    <div class="grid">
-        <div class="card"><h3>Cloud & Kubernetes</h3><p>Production-ready Azure AKS & AWS EKS clusters provisioned with Terraform.</p></div>
-        <div class="card"><h3>Infrastructure as Code</h3><p>Eliminate manual setup errors with Terraform & Ansible automation.</p></div>
-        <div class="card"><h3>Odoo ERP DevOps 🔥</h3><p>Specialized Odoo 19 deployment on Bare Metal (NVMe 4.0) for zero-lag POS.</p></div>
-    </div>
-</section>
+        <!-- Refined Services -->
+        <section id="services" style="padding: 80px 0;">
+            <h2 style="text-align:center; font-size: 2.5rem;" data-aos="fade-up">Consulting <span class="gradient">Specializations</span></h2>
+            <div class="grid">
+                <div class="card" data-aos="fade-right">
+                    <i class="fas fa-boxes icon" style="font-size: 2rem; color: var(--p);"></i>
+                    <h3>Odoo DevOps Lifecycle</h3>
+                    <p>Enterprise-grade Odoo deployment (V16-V19) on specialized Bare Metal infrastructure (Intel Silver 4310).</p>
+                </div>
+                <div class="card" data-aos="fade-up">
+                    <i class="fas fa-cloud icon" style="font-size: 2rem; color: var(--s);"></i>
+                    <h3>Cloud Architecture</h3>
+                    <p>Designing scalable Azure environments with dedicated Resource Groups and high-speed NVMe 4.0 storage.</p>
+                </div>
+                <div class="card" data-aos="fade-left">
+                    <i class="fas fa-rocket icon" style="font-size: 2rem; color: var(--p);"></i>
+                    <h3>CI/CD Automation</h3>
+                    <p>Automating infrastructure provisioning with Terraform to eliminate manual errors and downtime.</p>
+                </div>
+            </div>
+        </section>
 
-<hr>
+        <!-- Game Changer: Case Study -->
+        <section id="case-study" style="padding: 80px 0;" data-aos="zoom-in">
+            <h2 style="text-align:center; font-size: 2.5rem;">Proven <span class="gradient">Success</span></h2>
+            <div class="card" style="border-left: 6px solid var(--p);">
+                <h3 style="color: white;">Odoo ERP Cloud Deployment (Blue Sky Coffee)</h3>
+                <p><strong>Challenge:</strong> Frequent system crashes and manual server management slowing down retail POS.</p>
+                <p><strong>Solution:</strong> Full migration to optimized Azure cloud with Terraform automation and real-time monitoring.</p>
+                <p><strong>Impact:</strong> Deployment reduced from hours to 15 minutes, 100% stable POS sync, and 30% reduction in cloud spend.</p>
+            </div>
+        </section>
 
-<section id="proof">
-    <h2>Case Study: Blue Sky Coffee</h2>
-    <div class="card" style="border-left: 5px solid #22c55e;">
-        <p><strong>Before:</strong> Daily Odoo crashes, high latency in POS, and manual server updates.</p>
-        <p><strong>The Fix:</strong> Migrated to Bare Metal (2x Intel Silver 4310) with Terraform provisioning and Cloudflare security.</p>
-        <div class="grid" style="margin-top: 20px;">
-            <div style="text-align:center;"><h4 class="gradient">80%</h4><p>Faster Deployment</p></div>
-            <div style="text-align:center;"><h4 class="gradient">99.9%</h4><p>Measured Uptime</p></div>
-            <div style="text-align:center;"><h4 class="gradient">30%</h4><p>Cost Savings</p></div>
-        </div>
-    </div>
-</section>
+        <section class="container" style="text-align: center; padding: 100px 0;" data-aos="fade-up">
+            <h2>Ready to Scale Your Infrastructure?</h2>
+            <p style="color: #94a3b8; margin-bottom: 40px;">Currently managing 100+ endpoints with high-availability Azure architecture.</p>
+            <a href="https://wa.me/966534553453" class="btn">Get Your Free 15-Min Infrastructure Audit</a>
+        </section>
+    </main>
 
-<hr>
+    <footer>
+        <p>&copy; 2026 ITDELHI.IN | Faizal Emam | DevOps & Cloud Architect</p>
+        <p style="font-size: 13px; margin-top: 10px;">Managed via Terraform & GitHub Actions</p>
+    </footer>
 
-<section style="text-align: center;">
-    <h2>Ready to Fix Your Infrastructure?</h2>
-    <p style="color: #94a3b8;">I analyze your current setup and show you exactly where you're losing money. Free 15-minute consultation.</p>
-    <a class="btn" href="https://wa.me/966534553453">📞 Contact Faizal Emam Now</a>
-</section>
-
-<footer style="text-align: center; padding: 40px; color: #64748b; font-size: 14px;">
-    &copy; 2026 itdelhi.in | Dammam, KSA | Certified DevOps Architect
-</footer>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
 
 </body>
 </html>
